@@ -31,7 +31,7 @@ TRAINNED_TEXT=./eng.digits.training_text
    --tessdata_dir $TESSDATA_DIR \
    --exposures "0" \
    --save_box_tiff \
-   --fontlist "OCRB" "Arial Bold" \
+   --fontlist "OCRB" \
    --training_text $TRAINNED_TEXT \
    --workspace_dir ./tmp \
    --output_dir ./ocrb
@@ -51,7 +51,6 @@ lstmtraining \
   --old_traineddata $TRAINNED_DATA \
   --train_listfile ./ocrb/eng.training_files.txt \
   --debug_interval 0 \
-  --sequential_training \
   --max_iterations 800
 
 
