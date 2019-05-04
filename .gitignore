@@ -120,3 +120,4 @@ times.txt
 ./tmp
 ocrb
 ocrb_plus
+CMakeLists.txt.*
