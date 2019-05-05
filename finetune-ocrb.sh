@@ -51,7 +51,7 @@ lstmtraining \
   --old_traineddata $TRAINNED_DATA \
   --train_listfile ./ocrb/eng.training_files.txt \
   --debug_interval 0 \
-  --max_iterations 800
+  --max_iterations 2000
 
 
 # lstmtraining \

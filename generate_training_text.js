@@ -27,7 +27,7 @@ var getPermutations = function(list, maxLen) {
   // Start with size 1 because of initial values
   return generate(perm, maxLen, 1);
 };
-var num = parseInt(process.argv[2]) || 4;
+var num = parseInt(process.argv[2]) || 3;
 var arr = getPermutations(list, num);
 
 var file = fs.createWriteStream('eng.digits.training_text');
@@ -37,5 +37,8 @@ file.on('error', function(err) {
 });
 arr.forEach(function(v) {
   file.write(v.join('') + '\n');
+  // // last and first with space
+  // file.write(v[0] + '  ' + v.slice(1).join('') + '\n');
+  // file.write(v.slice(0, -1).join('') + '  ' + v[v.length - 1] + '\n');
 });
 file.end();
