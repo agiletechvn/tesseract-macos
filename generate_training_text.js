@@ -27,8 +27,8 @@ var getPermutations = function(list, maxLen) {
   // Start with size 1 because of initial values
   return generate(perm, maxLen, 1);
 };
-
-var arr = getPermutations(list, 4);
+var num = parseInt(process.argv[2]) || 4;
+var arr = getPermutations(list, num);
 
 var file = fs.createWriteStream('eng.digits.training_text');
 file.on('error', function(err) {
